@@ -22,10 +22,8 @@ public class SeleniumFLTest {
         Select dropDownMenu = new Select(driver.findElement(By.xpath("//*[@id=\"sortVal\"]")));
         dropDownMenu.selectByVisibleText("New Arrivals");
 
-        //WebElement findMyShoes = driver.findElement(By.xpath("//*[@id=\"endeca_search_results\"]/ul/li[2]/span/a[2]/img"));
-        WebElement findMyShoes = driver.findElement(By.xpath("//img[contains(lower-case(@src),'aq6895')]"));
-        //System.out.println(driver.findElement(By.xpath("//img[contains(lower-case(@src), 'aq6895')]")).getSize());
-       //action.click(findMyShoes).perform();
+        WebElement findMyShoes = driver.findElement(By.xpath("//img[contains(translate(@src,'AQ','aq'),'aq6895')]"));
+        action.click(findMyShoes).perform();
         /*
         WebElement dropMenu = driver.findElement(By.xpath("//*[@id=\"sortVal\"]"));
         WebElement menuNew = driver.findElement(By.xpath("//*[@id=\"sortVal\"]/option[4]"));
