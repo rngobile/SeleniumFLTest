@@ -24,14 +24,8 @@ public class SeleniumFLTest {
 
         WebElement findMyShoes = driver.findElement(By.xpath("//img[contains(translate(@src,'AQ','aq'),'aq6895')]"));
         action.click(findMyShoes).perform();
-        /*
-        WebElement dropMenu = driver.findElement(By.xpath("//*[@id=\"sortVal\"]"));
-        WebElement menuNew = driver.findElement(By.xpath("//*[@id=\"sortVal\"]/option[4]"));
-        action.click(dropMenu).perform();
-        action.moveToElement(menuNew).perform();
-        action.click(menuNew).perform();
-        */
-        //Thread.sleep(5000);
-        //driver.close();
+
+        Thread.sleep(5000);
+        driver.close();
     }
 }
